@@ -1,7 +1,7 @@
 body {
 	background-color: #1e2225;
 	color: #fff;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -11,6 +11,17 @@ body {
 	margin: 0 auto;
 	max-width: 1170px;
 	padding: 0 .9375em;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
 }
 
 .header_page {
@@ -28,11 +39,14 @@ body {
 }
 
 /**
- * Estilos del header del sitioo
+ * Estilos header del sitio
  */
 .header_page {
+	margin-bottom: 5em;
 	padding-bottom: 1.5em;
 	padding-top: 1.5em;
+	position: relative;
+	z-index: 5;
 }
 
 .logo {
@@ -57,4 +71,76 @@ body {
 	font-weight: normal;
 	margin: 0 0 0 2em;
 	vertical-align: middle;
+}
+
+/**
+ * Estilos background de intro
+ */
+.background_intro {
+	background-image: url(../img/background_starterdaily.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	bottom: 2em;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.overlay_intro {
+	background-color: rgba(30,33,36,0.6);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(30,33,36,0.6)), color-stop(100%, #131517));
+	background-image: -webkit-linear-gradient(rgba(30,33,36,0.6) 40%, #131517);
+	background-image: linear-gradient(rgba(30,33,36,0.6) 40%, #131517);
+	bottom: 2em;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+/**
+ * Estilos del contenido de intro
+ */
+.content_intro {
+	position: relative;
+	text-align: center;
+	z-index: 3;
+}
+
+.pitch {
+	font-size: 2.25em;
+	font-weight: normal;
+	padding: 0 5em;
+}
+
+.content_intro p {
+	font-size: 1em;
+}
+
+/**
+ * Estilos del formulario para suscribirse
+ */
+.mc-field-group input {
+	display: inline-block;
+	border: 0;
+	height: 2.75em;
+	padding: 0 1.5em;
+}
+
+input[type="email"] {
+	border-radius: 50px 0 0 50px;
+	color: #1e2225;
+	min-width: 250px;
+}
+
+input[type="submit"] {
+	background-color: #6bbe98;
+	border-radius: 0 50px 50px 0;
 }
