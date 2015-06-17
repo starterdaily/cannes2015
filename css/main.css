@@ -1,0 +1,60 @@
+body {
+	background-color: #1e2225;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1170px;
+	padding: 0 .9375em;
+}
+
+.header_page {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+  -webkit-justify-content: space-between;
+  justify-content:         space-between;
+
+  -webkit-align-items: center;
+  align-items:         center;
+}
+
+/**
+ * Estilos del header del sitioo
+ */
+.header_page {
+	padding-bottom: 1.5em;
+	padding-top: 1.5em;
+}
+
+.logo {
+	background-image: url(../img/logo_starterdaily.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	display: inline-block;
+	height: 25px;
+	margin: 0;
+	vertical-align: middle;
+	width: 213px;
+}
+
+.logo span {
+	display: inline-block;
+	text-indent: -9999px;
+}
+
+.medio {
+	display: inline-block;
+	font-size: .85em;
+	font-weight: normal;
+	margin: 0 0 0 2em;
+	vertical-align: middle;
+}
