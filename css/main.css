@@ -7,6 +7,16 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+::-moz-selection {
+	color: #fff;
+	background: #1e2225;
+}
+
+::selection {
+	color: #fff;
+	background: #1e2225;
+}
+
 .container {
 	margin: 0 auto;
 	max-width: 1170px;
@@ -115,9 +125,8 @@ body {
 }
 
 .pitch {
-	font-size: 2.25em;
+	font-size: 1.5em;
 	font-weight: normal;
-	padding: 0 5em;
 }
 
 .content_intro p {
@@ -128,19 +137,66 @@ body {
  * Estilos del formulario para suscribirse
  */
 .mc-field-group input {
-	display: inline-block;
+	box-sizing: border-box;
+	display: block;
 	border: 0;
-	height: 2.75em;
-	padding: 0 1.5em;
+	font-size: .9em;
+	height: 3em;
+	padding: 0 1.25em;
+	-webkit-transition: all .5s linear;
+	-moz-transition: all .5s linear;
+	-ms-transition: all .5s linear;
+	-o-transition: all .5s linear;
+	transition: all .5s linear;
+	width: 100%;
 }
 
 input[type="email"] {
-	border-radius: 50px 0 0 50px;
-	color: #1e2225;
-	min-width: 250px;
+	color: #555a5d;
+}
+
+input[type="email"]:focus {
+	-webkit-box-shadow:inset 0 0 10px 0 rgba(0,0,0,.15);
+	box-shadow:inset 0 0 10px 0 rgba(0,0,0,.15);
 }
 
 input[type="submit"] {
 	background-color: #6bbe98;
-	border-radius: 0 50px 50px 0;
+	text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+	background-color: #21a86a;
+}
+
+/**
+ * Media queries
+ */
+@media only screen and (min-width: 640px) {
+	.pitch {
+		border-radius: 0;
+		font-size: 2.25em;
+	}
+
+	.mc-field-group input {
+		display: inline-block;
+		width: auto;
+	}
+
+	input[type="email"] {
+		border-radius: 3px 0 0 3px;
+		min-width: 250px;
+	}
+
+	input[type="submit"] {
+		border-radius: 0 3px 3px 0;
+		margin-left: -5px;
+		padding: 0 3em;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.pitch {
+		padding: 0 5em;
+	}
 }
