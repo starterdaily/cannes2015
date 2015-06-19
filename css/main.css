@@ -73,7 +73,7 @@ body {
 	height: 25px;
 	margin: 0;
 	vertical-align: middle;
-	width: 213px;
+	width: 223px;
 }
 
 .logo span {
@@ -83,6 +83,12 @@ body {
 
 .cannes_header {
 	display: none;
+}
+
+.cannes_header img {
+	display: block;
+	height: auto;
+	max-width: 100%;
 }
 
 /**
