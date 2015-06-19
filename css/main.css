@@ -149,6 +149,8 @@ body {
 	-webkit-appearance: none;
 	-moz-appearance:    none;
 	appearance:         none;
+  -webkit-border-radius:0;
+	border-radius: 0;
 	box-sizing: border-box;
 	display: block;
 	border: 0;
