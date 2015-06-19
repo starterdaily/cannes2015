@@ -1,8 +1,9 @@
 body {
 	background-color: #1e2225;
 	color: #fff;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Titillium Web', sans-serif;
 	font-size: 16px;
+	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -53,7 +54,7 @@ body {
  */
 .header_page {
 	box-sizing: border-box;
-	margin-bottom: 3em;
+	margin-bottom: 1.5em;
 	padding-bottom: 1.5em;
 	padding-top: 1.5em;
 	position: relative;
@@ -62,7 +63,6 @@ body {
 
 .logo_header {
 	margin: 0 auto;
-	text-align: center;
 }
 
 .logo {
@@ -71,7 +71,7 @@ body {
 	background-size: 100% auto;
 	display: inline-block;
 	height: 25px;
-	margin: 0 0 10px;
+	margin: 0;
 	vertical-align: middle;
 	width: 213px;
 }
@@ -79,14 +79,6 @@ body {
 .logo span {
 	display: inline-block;
 	text-indent: -9999px;
-}
-
-.medio {
-	display: inline-block;
-	font-size: .85em;
-	font-weight: normal;
-	margin: 0;
-	vertical-align: middle;
 }
 
 .cannes_header {
@@ -104,7 +96,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-	bottom: 2em;
+  height: 130%;
 	left: 0;
 	position: absolute;
 	right: 0;
@@ -117,7 +109,7 @@ body {
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(30,33,36,0.6)), color-stop(100%, #131517));
 	background-image: -webkit-linear-gradient(rgba(30,33,36,0.6) 40%, #131517);
 	background-image: linear-gradient(rgba(30,33,36,0.6) 40%, #131517);
-	bottom: 2em;
+	height: 130%;
 	left: 0;
 	position: absolute;
 	top: 0;
@@ -136,17 +128,21 @@ body {
 
 .pitch {
 	font-size: 1.5em;
-	font-weight: normal;
+	font-weight: 600;
+	margin-bottom: 2em;
 }
 
 .content_intro p {
-	font-size: 1em;
+	font-size: .95em;
 }
 
 /**
  * Estilos del formulario para suscribirse
  */
 .mc-field-group input {
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
 	box-sizing: border-box;
 	display: block;
 	border: 0;
@@ -154,10 +150,10 @@ body {
 	height: 3em;
 	padding: 0 1.25em;
 	-webkit-transition: all .5s linear;
-	-moz-transition: all .5s linear;
-	-ms-transition: all .5s linear;
-	-o-transition: all .5s linear;
-	transition: all .5s linear;
+	-moz-transition: 		all .5s linear;
+	-ms-transition: 		all .5s linear;
+	-o-transition: 			all .5s linear;
+	transition: 				all .5s linear;
 	width: 100%;
 }
 
@@ -179,31 +175,62 @@ input[type="submit"]:hover {
 	background-color: #21a86a;
 }
 
+.validation {
+	color: #fff;
+	display: block;
+	font-size: 0.875em;
+	font-weight: 600;
+	margin-top: 0.5em;
+	position: absolute;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+.validation .bad {
+	color: #e5615f;
+}
+
+.validation .good {
+	color: #6bbe98;
+}
+
+#mc_embed_signup {
+	margin-bottom: 5em;
+}
+
+.screens {
+	position: relative;
+}
+
+.iphone {
+	background-image: url('../img/iphone_starterdaily.png');
+	height: 544px;
+	margin: 0 auto;
+	max-width: 100%;
+	position: relative;
+	top: 0px;
+	width: 309px;
+}
+
 /**
  * Media queries
  */
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 500px) {
 	.header_page {
-		margin-bottom: 5em;
+		margin-bottom: 3em;
 	}
 
 	.logo_header {
 		margin: 0;
 	}
 
-	.logo {
-		margin: 0;
-	}
-
-	.medio {
-		margin-left: 1em;
-	}
-}
-
-@media only screen and (min-width: 640px) {
 	.pitch {
-		border-radius: 0;
 		font-size: 2.25em;
+	}
+
+	.content_intro p {
+		font-size: 1.1em;
 	}
 
 	.mc-field-group input {
@@ -225,10 +252,29 @@ input[type="submit"]:hover {
 	.cannes_header {
 		display: block;
 	}
+
+	.background_intro,
+	.overlay_intro {
+		height: 90%;
+	}
+
+	.macbook {
+		background-image: url('../img/macbook_starterdaily.png');
+		height:610px;
+		left: 50%;
+		margin-left: -400px;
+		position:absolute;
+		width:1009px;
+	}
+
+	.iphone {
+		margin-left: 100px;
+		top: 40px;
+	}
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 980px) {
 	.pitch {
-		padding: 0 5em;
+		padding: 0 4em;
 	}
 }
