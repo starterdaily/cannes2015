@@ -26,7 +26,6 @@
 	<link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
 	<link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
 	<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
-	<link rel="manifest" href="favicons/manifest.json">
 	<meta name="apple-mobile-web-app-title" content="StarterDaily">
 	<meta name="application-name" content="StarterDaily">
 	<meta name="msapplication-TileColor" content="#545454">
@@ -79,8 +78,19 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.ajaxchimp.min.js"></script>
 	<script>
+		$.ajaxChimp.translations.sd = {
+			'submit': 'Subscribing...',
+			0: '<span class="good">Thanks! We have sent you a confirmation e-mail</span>',
+			1: '<span class="bad">Please enter your e-mail to subscribe</span>',
+			2: '<span class="bad">Please enter a valid e-mail address</span>',
+			3: '<span class="bad">Please enter a valid e-mail address</span>',
+			4: '<span class="bad">Please enter a valid e-mail address</span>',
+			5: '<span class="bad">Please enter a valid e-mail address</span>',
+    }
+
 		$('#starterdaily-form').ajaxChimp({
-			url: 'http://starterdaily.us5.list-manage.com/subscribe/post?u=70c657ad7043e062933a0a0f8&amp;id=3ea44818dd'
+			url: 'http://starterdaily.us5.list-manage.com/subscribe/post?u=70c657ad7043e062933a0a0f8&amp;id=3ea44818dd',
+			language: 'sd'
 		});
 	</script>
 </body>
